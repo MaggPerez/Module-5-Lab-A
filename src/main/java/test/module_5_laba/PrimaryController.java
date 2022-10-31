@@ -2,11 +2,15 @@ package test.module_5_laba;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
+import javafx.event.ActionEvent;
+import javafx.scene.text.Text;
 
 public class PrimaryController {
+    @FXML
+    private Text actiontarget;
 
     @FXML
-    private void switchToSecondary() throws IOException {
-        App.setRoot("secondary");
+    protected void signin(ActionEvent event) throws IOException{
+        actiontarget.setText("Sign in button pressed");
     }
 }
